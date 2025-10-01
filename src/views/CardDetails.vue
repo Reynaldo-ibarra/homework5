@@ -5,5 +5,5 @@ const route = useRoute()
 
 
 <template>
-    {{ Route.params.id }}
+    {{ route.params.id }}
 </template>
