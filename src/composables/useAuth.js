@@ -1,17 +1,17 @@
-import router from "../router"
+import router from '../router'
 
-import { firebaseapp } from './useFirebase'
-import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth"
-import { useAuth as firebaseAuth } from '@vueuse/firebase/usAuth'
+import { firebaseApp } from './useFirebase'
+import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth'
+import {useAuth as firebaseAuth} from '@vueuse/firebase/useAuth'
 
-const auth = getAuth(firebaseapp)
+const auth = getAuth(firebaseApp)
 
 const { isAuthenticated, user } = firebaseAuth(auth)
 
 export const useAuth = () => {
     const login = async (username, password) => {
         await signInWithEmailAndPassword(auth, username, password)
-        return isAuthenticated.Value
+        return isAuthenticated.value
     }
 
     const logout = async () => {
