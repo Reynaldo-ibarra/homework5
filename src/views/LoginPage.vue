@@ -1,16 +1,17 @@
 <template>
-    <form class="" @submit.prevent>
+    <form class="m-10" @submit.prevent>
         <div>
-            <label for="username" class="">Username</label>
+            <label for="username" class="block mb-2 font-bold">Username</label>
             <input id="username" v-model="username" type="text" placeholder="username">
         </div>
         <div>
-            <label for="Password" class="">Password</label>
+            <label for="Password" class="block mb-2 font-bold">Password</label>
             <input id="password" v-model="password" type="password" placeholder="password">
         </div>
 
 
-        <button @click="logUserIn" class="">LOGIN</button>
+        <button @click="logUserIn"
+            class="bg-green-500 mt-4 px-4 py-2 hover:bg-green-800 hover:text-white">LOGIN</button>
     </form>
 </template>
 
